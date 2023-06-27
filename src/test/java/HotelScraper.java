@@ -15,12 +15,12 @@ public class HotelScraper {
     public HotelScraper() {
         System.setProperty("webdriver.chrome.driver", "C:/Users/Guille/IdeaProjects/ScrapperDACD/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new");
+        options.addArguments("--headless");
+        options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36");
         driver = new ChromeDriver(options);
-        Logger.getLogger("org.openqa.selenium").setLevel(Level.SEVERE);
-        System.setProperty("webdriver.chrome.silentOutput", "true");
-
+        System.out.println("good");
     }
+
 
     public void getComments() {
         driver.get(HotelScraperUI.url);
